@@ -24,7 +24,8 @@ CREATE TABLE IF NOT EXISTS `item` (
   `MaterialID` int NOT NULL DEFAULT '0',
   `ItemDisplayInfo` int unsigned NOT NULL DEFAULT '0',
   `InventorySlotID` int unsigned NOT NULL DEFAULT '0',
-  `SheathID` int unsigned NOT NULL DEFAULT '0'
+  `SheathID` int unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY(`itemID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 ROW_FORMAT=COMPRESSED KEY_BLOCK_SIZE=8;
 
 -- Dumping data for table dbc.item: ~46,332 rows (approximately)
