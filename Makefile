@@ -1,6 +1,6 @@
 .PHONY: all create base wobgob clean
 
-all: create base wobgob
+all: create base wobgob retroporting
 
 create:
 	@mysql --user=acore --password=acore --execute 'CREATE DATABASE IF NOT EXISTS dbc'
@@ -10,6 +10,9 @@ base:
 
 wobgob:
 	@cat wobgob/*.sql | mysql --user=acore --password=acore dbc
+
+retroporting:
+	@cat retroporting/*.sql | mysql --user=acore --password=acore dbc	
 
 clean:
 	@mysql --user=acore --password=acore --execute 'DROP DATABASE dbc'
